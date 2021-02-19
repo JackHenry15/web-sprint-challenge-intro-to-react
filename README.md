@@ -31,12 +31,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-
+React JS better handles dynamic data using components to create a smoother user experience
 1. Describe component state.
-
+An object that holds information that can change over time
 1. Describe props.
-
+Props are immutable info holders that cannot be changed
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Anything that affects something outside of the scope of the current function being executed. setState updates the components variables and re-renders the component tree.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -59,11 +60,11 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the following API:
+- [ x] Use the following API:
   - [Star Wars API](https://swapi.dev/)
-- [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
+- [x ] Use the documentation and Google to learn how to fetch characters from your API.
+- [ x] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [ x] Set the list of characters into state.
 - [ ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
@@ -72,10 +73,10 @@ Your finished project must include all of the following requirements:
 
 ### Required best practices
 
-- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
 - [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
-- [ ] Consistent quotation usage.
-- [ ] Spell-check.
+- [ x] Consistent quotation usage.
+- [ x] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.

@@ -1,10 +1,18 @@
 // Write your Character component here
 import React from 'react'
 import styled from 'styled-components'
+import Details from './Details'
 
 
 
 const StyledChar = styled.div`
+border-style: solid; 
+border-color: yellow;
+
+button{
+
+
+}
 
 
 
@@ -16,10 +24,11 @@ const StyledChar = styled.div`
 export default function Character({info, action, bold}){
     return(
         <StyledChar>
-            {info.name}
+            <h3>{info.name}</h3>
             <button onClick={() => action(info.id)}>
-                {info.birthyear}
+                {info.birth_year}
             </button>
+            <Details info={info}/>
         </StyledChar>
     )
 }

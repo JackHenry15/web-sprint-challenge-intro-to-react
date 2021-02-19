@@ -1,50 +1,33 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
+
 
 export default function Details(props) {
-    const {charId, close} = props
-    const [details, setDetails] = useState(null)
+    const {info} = props
+    // const [details, setDetails] = useState(null)
 
-
-
-    //fetch charId details
-    useEffect(() => {
-        axios
-        .get(`https://swapi.dev/api/people/${charId}`)
-        .then(res => {
-            setDetails(res.data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }, [charId])
 
 
     return(
-        <div className=''>
+        <div >
             <h2>Character Details:</h2>
             {
-                details &&
+                info &&
                 <>
-                    <p>Gender: {details.gender}</p>
-                    <p>Height: {details.height}</p>
-                    <p>Mass: {details.mass}</p>
-                    <p>Birth Year:{details.birth_year}</p>
-                    <p>Hair Color:{details.hair_color}</p>
-                    <p>Skin Color: {details.skin_color}</p>
-                    <p>Eye Color: {details.eye_color}</p>
+                    <p>Gender: {info.gender}</p>
+                    <p>Height: {info.height}</p>
+                    <p>Mass: {info.mass}</p>
+                    <p>Birth Year:{info.birth_year}</p>
+                    <p>Hair Color:{info.hair_color}</p>
+                    <p>Skin Color: {info.skin_color}</p>
+                    <p>Eye Color: {info.eye_color}</p>
 
-                    <p>Species: {details.species}</p>
-                    <p>Vehicles: {details.vehicles}</p>
-                    <p>Starships: {details.starships}</p>
-
-                    <p>Homeworld: {details.homeworld}</p>
-                    <p>Created: {details.created}</p>
-                    <p>Edited: {details.edited}</p>
-                    <p>URL: {details.url}</p>
+                    <p>Homeworld: {info.homeworld}</p>
+                    <p>Created: {info.created}</p>
+                    <p>Edited: {info.edited}</p>
+                    <p>URL: {info.url}</p>
                 </>
             }
-
+            
         </div>
     )
 

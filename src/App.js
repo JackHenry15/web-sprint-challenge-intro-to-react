@@ -7,8 +7,10 @@ import Details from './components/Details'
 export default function App() {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
+// const {count}
 const [chars, setChars] = useState([])
 const [currentCharId, setCurrentCharId] = useState(null)
+
 
 
 const openDetails = id => {
@@ -25,6 +27,8 @@ const closeDetails = () => {
     .get(`https://swapi.dev/api/people`)
     .then(res => {
       setChars(res.data)
+      // console.log(res.data[1])
+      // console.log(chars[0])
     })
     .catch(err => {
       console.log(err)
@@ -34,16 +38,17 @@ const closeDetails = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      {
-        chars.map(ch => {
-          return <Character key={ch.id} info={ch} action={openDetails}/>
+        {
+        chars.map(data => {
+          return <Character key={data.name} info={data} action={openDetails}/>
         })
       }
-      {
+      {/* {
         currentCharId && <Details charId={currentCharId} close={closeDetails}/>
-      }
+      } */}
     </div>
   );
 }
 
 // export default App;
+// aaa
