@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Details(props) {
     const {info} = props
-    // const [details, setDetails] = useState(null)
+
 
 
 
@@ -20,11 +20,7 @@ export default function Details(props) {
                     <p>Hair Color:{info.hair_color}</p>
                     <p>Skin Color: {info.skin_color}</p>
                     <p>Eye Color: {info.eye_color}</p>
-
-                    <p>Homeworld: {info.homeworld}</p>
-                    <p>Created: {info.created}</p>
-                    <p>Edited: {info.edited}</p>
-                    <p>URL: {info.url}</p>
+                    <a href={info.url}>URL</a>
                 </>
             }
             
